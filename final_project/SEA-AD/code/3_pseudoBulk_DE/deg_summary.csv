@@ -1,0 +1,25 @@
+cell_type,n_samples,base_degs,adjusted_degs
+L2/3 IT,80,0,453
+L4 IT,80,2,10
+Pvalb,80,9,3
+Sncg,80,2,3
+L6 CT,80,1,2
+Sst Chodl,75,0,1
+Sst,80,0,1
+VLMC,80,1,1
+Astrocyte,80,1,0
+Chandelier,79,0,0
+Endothelial,80,1,0
+L5/6 NP,80,0,0
+L5 ET,78,0,0
+L5 IT,80,0,0
+L6 IT Car3,79,0,0
+L6 IT,80,0,0
+L6b,79,0,0
+Lamp5 Lhx6,79,0,0
+Lamp5,80,0,0
+Microglia-PVM,80,0,0
+Oligodendrocyte,80,0,0
+OPC,80,0,0
+Pax6,80,0,0
+Vip,80,0,0

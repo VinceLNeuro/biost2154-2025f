@@ -1,0 +1,74 @@
+# Confirm Python version and conda environment
+echo "Using Python: $(which python)"
+Using Python: /ix/ccdg/storage3/til177/custom_miniconda/envs/singleCell/bin/python
+python -V
+Python 3.11.13
+echo "Conda env: $CONDA_DEFAULT_ENV"
+Conda env: singleCell
+
+
+start_time=$(date +%s)
+# Rscript --vanilla "3_pseudoBulk_DE_array.R" ${SLURM_ARRAY_TASK_ID}
+python 0_subset_VLMC.py
+Loading full MTG dataset...
+Total cells: 1378211
+Total genes: 36601
+
+Cell types available:
+Subclass
+L2/3 IT            330085
+L4 IT              168860
+L5 IT              128090
+Oligodendrocyte    111194
+Vip                104514
+Pvalb               90804
+Astrocyte           70009
+Sst                 58265
+L6 IT               45252
+Lamp5               42921
+Microglia-PVM       40000
+OPC                 32493
+L6 IT Car3          26129
+Sncg                22168
+Lamp5 Lhx6          21443
+L5/6 NP             20741
+L6 CT               18402
+L6b                 16227
+Chandelier          10928
+Pax6                 9203
+VLMC                 4328
+L5 ET                2590
+Endothelial          2069
+Sst Chodl            1496
+Name: count, dtype: int64
+
+VLMC cells found: 4328
+Genes: 36601
+
+Donor distribution in VLMC subset:
+Donor ID
+H21.33.027    197
+H20.33.018    196
+H21.33.010    144
+H20.33.005    123
+H21.33.045    115
+H20.33.030    108
+H20.33.020    102
+H19.33.004     97
+H20.33.046     97
+H20.33.028     92
+Name: count, dtype: int64
+
+Cognitive Status distribution:
+Cognitive Status
+Dementia       2361
+No dementia    1843
+Reference       124
+Name: count, dtype: int64
+
+VLMC subset saved to: /ihome/hpark/til177/GitHub/biost2154-2025f/final_project/SEA-AD/data/MTG/SEAAD_MTG_RNAseq_final-nuclei_VLMC_subset.h5ad
+VLMC metadata saved to: /ihome/hpark/til177/GitHub/biost2154-2025f/final_project/SEA-AD/data/MTG/VLMC_metadata.csv
+end_time=$(date +%s)
+duration=$((end_time - start_time))
+echo "Duration: $duration seconds"
+Duration: 911 seconds

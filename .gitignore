@@ -2,3 +2,22 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# lab6 files
+lab6/10k_pbmc_*
+lab6/*.rds
+
+# final project archived data
+final_project/snRNAseq_AD_human_entorhinal/
+final_project/STRS/
+
+# Keep directory structure but ignore all contents
+final_project/SEA-AD/data/*
+final_project/SEA-AD/code/tunnel.*
+final_project/SEA-AD/code/0_eda/*
+final_project/SEA-AD/code/3_pseudoBulk_DE/archive/*
+final_project/SEA-AD/code/3_pseudoBulk_DE/array_logs/*
+final_project/SEA-AD/code/3_pseudoBulk_DE/results_by_celltype/*
+final_project/SEA-AD/code/3_pseudoBulk_DE/weird_res_L2_3_IT/*
+final_project/SEA-AD/code/3_pseudoBulk_DE/de_results_lateNC_combined.rds
+
